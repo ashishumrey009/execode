@@ -1,4 +1,5 @@
 import React from "react";
+
 export default class TodayContest extends React.Component {
   constructor() {
     super();
@@ -53,18 +54,21 @@ export default class TodayContest extends React.Component {
       comments: "abc"
     };
   }
+
   render() {
-    let { contests: contestFinalData } = this.state;
+    const { contests: contestFinalData } = this.state;
     const res = contestFinalData.slice(1).map((e, index) => {
       return (
-        <div class="col-xl-5 col-sm-12 col-md-6  mb-3 ml-5  card shadow ">
-          <div class="row align-items-center justify-content-around card-body">
-            <div class="col-xs-8 col-sm-8">
+        <div className="col-xl-5 col-sm-12 col-md-6  mb-3 ml-5  card shadow ">
+          <div className="row align-items-center justify-content-around card-body">
+            <div className="col-xs-8 col-sm-8">
               <h3>Contest Name</h3>
               <p>Start Time | End Time | Start Date | End Date</p>
             </div>
-            <div class="col-xs-4 col-sm-4 p-1">
-              <button class="btn btn-success border">View Submission</button>
+            <div className="col-xs-4 col-sm-4 p-1">
+              <button className="btn btn-success border">
+                View Submission
+              </button>
             </div>
           </div>
         </div>
@@ -75,14 +79,14 @@ export default class TodayContest extends React.Component {
       <div>
         <div className="container-fulid ml-5 my-3">
           <div className="row  p-3 ">
-            <div class="col-xs-12 col-sm-12 col-md-6  mb-3 mr-2 card shadow">
-              <div class="row align-items-center ">
-                <div class="col-xs-8 col-sm-8">
+            <div className="col-xs-12 col-sm-12 col-md-6  mb-3 mr-2 card shadow">
+              <div className="row align-items-center ">
+                <div className="col-xs-8 col-sm-8">
                   <h3>Contest Name</h3>
                   <p>Start Time | End Time | Start Date | End Date</p>
                 </div>
-                <div class="col-xs-4 col-sm-4 p-1">
-                  <button class="btn btn-success border">
+                <div className="col-xs-4 col-sm-4 p-1">
+                  <button className="btn btn-success border">
                     View Submission
                   </button>
                 </div>
@@ -91,7 +95,7 @@ export default class TodayContest extends React.Component {
           </div>
         </div>
         <div className="container-fluid">
-          <div class="row ">{res}</div>
+          <div className="row ">{res}</div>
         </div>
       </div>
     );
